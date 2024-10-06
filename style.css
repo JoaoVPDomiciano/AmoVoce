@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Esconder rolagem horizontal */
+    background: url('img/NoiteEstrelada.jpg') no-repeat center center fixed; /* Adicione a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+}
+
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 20px auto; /* Margem automática para centralizar */
+    max-width: 600px; /* Limite de largura do contêiner */
+}
+
+.foto-central {
+    background-color: #3C74A6;
+    width: 100%; /* Usar 100% da largura do contêiner */
+    max-width: 500px; /* Limite máximo de largura */
+    max-height: 80vh; /* Altura máxima de 80% da altura da viewport */
+    height: auto; /* Manter a proporção da altura */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 20px 0;
+    object-fit: contain; /* Ajusta a imagem sem cortá-la */
+    border: 5px solid #F2F2F2 /* Adiciona uma borda sólida de 5px de espessura */
+}
+
+
+.divisao {
+    border: 1px solid #F2F2F2; /* Cor e espessura da linha */
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+}
+
+.secao-texto {
+    background-color: #3C74A6; /* Cor de fundo da seção de texto */
+    border-radius: 10px;
+    padding: 20px; /* Espaçamento interno */
+    text-align: center;
+    margin: 20px; /* Centralizar texto */
+}
+
+.contador {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #F2F2F2;
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas para o fundo do contador */
+}
+
+.texto {
+    font-size: 18px;
+    color: #F2F2F2;
+}
+
+/* Estilo para flocos de neve */
+.snowHarts {
+    position: absolute;
+    top: -10%; /* Começar acima da tela */
+    pointer-events: none;
+    animation: fall linear infinite;
+    animation-duration: 5s; /* Duração da animação */
+    z-index: 2; /* Z-index maior para os flocos de neve */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0); /* Começar no topo */
+    }
+    100% {
+        transform: translateY(100vh); /* Cair até a parte inferior da tela */
+    }
+}
